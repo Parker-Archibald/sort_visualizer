@@ -2,7 +2,7 @@ import '../Styles/App.css';
 import sleep from './Sleep';
  
  //sort using the bubble sort
- const bubbleSort = async (array) => {
+ const bubbleSort = async (array, speed) => {
 
     let heightFactor = 17;
 
@@ -22,15 +22,15 @@ import sleep from './Sleep';
           bars[j].style.backgroundColor = 'lightgreen';
           bars[j + 1].style.height = array[j + 1] * heightFactor + 'px';
           bars[j + 1].style.backgroundColor = 'lightgreen';
-          await sleep(20)
+          await sleep(speed)
         }
       }
-      await sleep(20)
+      await sleep(speed)
     }
     for(let x = 0; x < array.length; x++) {
       bars[x].style.height = array[x] * heightFactor + 'px';
       bars[x].style.backgroundColor = 'lightgreen'
-      await sleep(20)
+      await sleep(speed)
   }
     return array;
   }
